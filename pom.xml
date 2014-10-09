@@ -34,7 +34,7 @@
                                     <goal>java</goal>
                                 </goals>
                                 <configuration>
-                                    <mainClass>callete.template.samples.WeatherExample</mainClass>
+                                    <mainClass>callete.template.samples.RotaryEncoderExample</mainClass>
                                 </configuration>
                             </execution>
                         </executions>
