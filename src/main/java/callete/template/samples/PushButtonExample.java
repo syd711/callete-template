@@ -25,6 +25,11 @@ public class PushButtonExample {
       public long getPushDebounceMillis() {
         return 700;
       }
+
+      @Override
+      public long getLongPushDebounceMillis() {
+        return 1500;
+      }
     });
 
     System.in.read();
