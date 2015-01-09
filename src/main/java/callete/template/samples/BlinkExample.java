@@ -1,6 +1,5 @@
 package callete.template.samples;
 
-
 import callete.api.Callete;
 import callete.api.services.gpio.DigitalOutputPin;
 import callete.api.services.gpio.GPIOService;
@@ -12,9 +11,12 @@ import callete.api.services.gpio.PinState;
 public class BlinkExample {
 
   public static void main(String[] args) throws InterruptedException {
+    System.out.println("Started BlinkExample");
+    
     GPIOService gpioService = Callete.getGPIOService();
-    DigitalOutputPin digitalOutputPin = gpioService.connectDigitalOutputPin(12, PinState.HIGH);
-    for(int i=0; i<30; i++) {
+    //connect the LED to the pin with number 12, not the GPIO pin 12.
+    DigitalOutputPin digitalOutputPin = gpioService.connectDigitalOutputPin(12, "Digital Pin 12", PinState.HIGH);
+    for(int i = 0; i < 30; i++) {
       //wait for
       Thread.sleep(700);
       digitalOutputPin.toggle();
